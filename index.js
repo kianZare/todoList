@@ -12,7 +12,7 @@ todoList.addEventListener('click', checkRemove);
 
 function addTodo (e) {
     e.preventDefault();
-    console.log(e)
+    // console.log(e)
 
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todo');
@@ -27,8 +27,19 @@ function addTodo (e) {
 };
 
 function checkRemove (e) {
-    console.log(e)
-}
+    const classList = [...e.target.classList];
+    const item = e.target;
+    console.log(item.parentElement.parentElement)
+    
+    if(classList[1] === "fa-check-square") {
+        const todo = item.parentElement.parentElement;
+        todo.classList.toggle("completed")
+    } else if (classList [1] === "fa-trash-alt"){
+        const todo = item.parentElement.parentElement;
+        todo.remove();
+    }
+};
+
 
 
 

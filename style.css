@@ -107,3 +107,8 @@ form button:hover {
 .fa-check-square{
     color: var(--primaryColor);
 }
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
