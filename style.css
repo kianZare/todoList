@@ -46,6 +46,9 @@ header {
 .todo-container {
     width: 25rem;
 }
+.todo-container li{
+    margin-left: 0.8rem;
+}
 
 form {
     width: 25rem;
